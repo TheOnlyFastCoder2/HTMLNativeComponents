@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --grayscale-00: 0, 0, 0;
+  --grayscale-01: 24, 24, 24;
+  --grayscale-02: 68, 68, 68;
+  --grayscale-03: 185, 185, 185;
+  --grayscale-04: 207, 207, 207;
+  --grayscale-05: 228, 228, 228;
+  --grayscale-06: 245, 245, 245;
+  --grayscale-07: 255, 255, 255;
+
+  --primary-00: 123, 49, 212;
+  --primary-01: 149, 76, 237;
+  --primary-02: 166, 76, 237;
+  --primary-03: 186, 139, 243;
+  --primary-04: 149, 76, 237, 0.2;
+
+  --secondary-01: 47, 219, 188;
+  --secondary-02: 255, 170, 76;
+  --secondary-03: 193, 219, 47;
+
+  --additional-01: 255, 108, 45;
+  --additional-02: 236, 18, 17;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(var(--grayscale-01));
+
+  #root {
+    width: 100vw;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-shadow: 0 0 600px rgb(var(--grayscale-00));
+  }
+}
+
+.header__top-bar,.header__top-panel {
+  padding: 0 clamp(1rem, 0.0317rem + 4.1315vw, 3.75rem);
+}
