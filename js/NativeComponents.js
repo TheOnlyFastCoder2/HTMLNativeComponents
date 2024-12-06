@@ -37,7 +37,8 @@ async function getComponent(nameComponent, containerNode) {
     return response.text();
   })
   .then(async (html) => {
-    const isIntoSlot = new RegExp('<slot/>').test(html);
+    const nodeHtml = await parseNode(html);
+    const isIntoSlot = nodeHtml.querySelector('slot');
     const isIntoChildren = containerNode.innerHTML.trim().length > 0;
 
     if( isIntoChildren && isIntoSlot ) {
@@ -48,7 +49,7 @@ async function getComponent(nameComponent, containerNode) {
       throw new Error("You injected child elements, but you didn’t add <slot/> to the component.");
     }
  
-    const nodeHtml = await parseNode(html);
+
     await loadComponents(nodeHtml);
     return [containerNode, nodeHtml]
   })
