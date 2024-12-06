@@ -1,0 +1,115 @@
+.about {
+  color: rgb(var(--grayscale-07));
+
+  .about__title {
+    font-size: clamp(40px, 1.2676rem + 5.2582vw, 96px);
+    line-height: 106%;
+    font-weight: bold;
+    margin-bottom: 80px;
+  }
+
+  .about__description {
+    max-width: 410px;
+    margin-right: 0;
+    font-weight:600;
+    font-size:  clamp(24px, 1.2359rem + 1.1268vw, 36px);
+    text-wrap: balance;
+  
+  }
+
+  .about__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 8.19%;
+  
+    .about__content {
+      width: 34.63%;
+      .about__image {
+        max-width: 423px;
+        margin-top: 142px;
+      }
+    }
+
+    --featureWidth: 321px;
+    .about__feature {
+      display: grid;
+      gap: 13.5%  2.83%;
+      min-height: 953px;
+      width: calc(65.37% - 2.83%*2);
+      
+      grid-template-columns: repeat(2,minmax(min(100%, var(--featureWidth)), 1fr));
+      padding-left: 0;
+      .about__feature-item {
+        height: min-content;
+        margin: 0 auto;
+        img {
+          width: 100px;
+          aspect-ratio: 2/2;
+        }
+
+        .about__feature-title {
+          margin-top: 10px;
+          margin-bottom: 20px;
+          font-size: clamp(32px,1.6479rem + 1.5023vw, 48px);
+          font-weight: bold;
+          font-weight: 106%;
+          text-wrap: balance;
+          max-width: var(--featureWidth);
+        }
+
+        .about__feature-description {
+          font-size: clamp(16px,0.8239rem + 0.7512vw, 24px);
+          font-weight: bold;
+          font-weight:120%;
+          text-wrap: pretty;
+          max-width: var(--featureWidth);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1115px ) {
+    --featureWidth: 421px;
+       
+    .about__description, .about__title {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: min(800px, 100%);
+    }
+
+    .about__container {
+      flex-direction: column;
+      .about__feature-item { margin: 0; }
+      .about__feature,.about__content {
+        width: 100%;
+        .about__image {
+          display: none;
+        }
+      }
+      .about__feature {
+        justify-content: space-between;
+        text-align: center;
+        padding: 0;
+      }
+    } 
+  }
+
+  @media (max-width: 900px ) {
+    .about__container {
+      display: flex;
+      justify-content: center;
+  
+      .about__feature {
+        gap: 60px;    
+        margin-top: 40px;
+      }
+      .about__feature, .about__feature-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}

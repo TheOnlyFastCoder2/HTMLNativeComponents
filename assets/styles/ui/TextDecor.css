@@ -1,0 +1,19 @@
+.__text-decor {
+  display: inline-block;
+  position: relative;
+  min-width: min-content;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 46px;
+    display: block;
+    left: -10px;
+    padding: 0 10px;
+    position: absolute;
+    background: rgb(var(--primary-02));
+    transform:rotate(-2deg);
+    z-index: -1;
+    border-radius: 30px;
+  }
+}

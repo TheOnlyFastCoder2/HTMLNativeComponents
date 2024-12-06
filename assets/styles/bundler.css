@@ -1,3 +1,17 @@
 @import "./settings.css";
-@import "./ui/button.css";
+
+@import "./ui/Button.css";
+@import "./ui/TextDecor.css";
+@import "./ui/AbsBackground.css";
+@import "./ui/Gratitude.css";
+@import "./ui/AcceptCookies.css";
+
+@import "./components/Form.css";
 @import "./components/Header.css";
+@import "./components/sections/Hero.css";
+@import "./components/sections/AboutBudss.css";
+@import "./components/sections/Workds.css";
+@import "./components/sections/Metrics.css";
+@import "./components/sections/WhyBudds.css";
+@import "./components/sections/Brand.css";
+@import "./components/Footer.css";

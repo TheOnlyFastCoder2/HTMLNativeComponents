@@ -1,0 +1,118 @@
+.abs-background {
+  align-items: center;
+  justify-content: center;
+}
+
+.form-wrapper {
+  min-width: 335px;
+  max-width: 417px;
+  min-height: 547px;
+  
+  border-radius: 20px;
+  background: rgb(var(--grayscale-07));
+  .form-wrapper__top-panel {
+    display: flex;
+    justify-content: flex-end;
+    padding: 19px;
+    .form-wrapper__close-button {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 clamp(20px, 0.8099rem + 1.8779vw, 40px) clamp(16px, 0.1338rem + 2.6291vw, 40px);
+  .form__input-wrapper {
+    display: flex;
+    gap: 10px;
+    .form__field-input {
+      outline: none;
+      border: none;
+      &::placeholder {
+        color: rgb(var(--grayscale-03));
+      }
+    }
+    
+    .form__field-icon {
+      width: 22px;
+      aspect-ratio: 22/16;
+    }
+  }
+
+  .form__field {
+    width: 100%;
+    &.__important {
+      .form__field-title{
+        position: relative;
+        &::after {
+          content: " *";
+          white-space: pre;
+          position: relative;
+          color: rgb(var(--additional-02));
+          display: inline-block;
+        }
+      }
+    }
+    
+    .form__field-title,.form__field-input {
+      font-size: 14px;
+      line-height: 22px;
+    }
+   
+    .form__field-input:not(.form__field-input.__phone), .form__input-wrapper {
+      width: 100%;
+      padding: 9px 16px;
+      color: rgb(var(--grayscale-01));
+      background-color: rgb(var(--grayscale-07)) ;
+      border: 1px solid rgb(var(--grayscale-05));
+      border-radius: 14px;
+      margin-top: 4px;
+      &:focus, &:focus-visible {
+        border-color: rgb(var(--grayscale-03));
+        outline: unset;
+      }
+      
+      &::placeholder {
+        color: rgb(var(--grayscale-03));
+      }
+    }
+
+    .form__field-error {
+      display: none;
+      color: rgb(var(--additional-02));
+      font-size: 12px;
+      line-height: 20px;
+      margin-top: 10px;
+    }
+
+    &.__error {
+      .form__field-input:not(.form__field-input.__phone), .form__input-wrapper {
+        border-color: rgb(var(--additional-02));
+      }
+      .form__field-error {
+        display: block;
+      }
+    }
+  }
+
+  .form__agreement {
+    max-width: 337px;
+    font-weight:300;
+    font-size: 14px;
+    text-wrap: pretty;
+    line-height: 140%;
+    color: rgb(var(--grayscale-00));
+    margin: 20px 0;
+    a {
+      color: rgb(var(--primary-01));
+    }
+  }
+
+  .form__button-submit {
+    place-self: center;
+  }
+}

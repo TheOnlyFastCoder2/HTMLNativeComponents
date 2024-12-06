@@ -9,7 +9,8 @@
   --grayscale-05: 228, 228, 228;
   --grayscale-06: 245, 245, 245;
   --grayscale-07: 255, 255, 255;
-
+  --grayscale-darkGrey: 56, 56, 56;
+  
   --primary-00: 123, 49, 212;
   --primary-01: 149, 76, 237;
   --primary-02: 166, 76, 237;
@@ -22,8 +23,13 @@
 
   --additional-01: 255, 108, 45;
   --additional-02: 236, 18, 17;
+
+  --offset: clamp(1rem, 0.0317rem + 4.1315vw, 3.75rem);
 }
 
+img {
+  width: 100%;
+}
 
 * {
   margin: 0;
@@ -31,20 +37,78 @@
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
   font-style: normal;
+  /* box-shadow:  0 0 0 1px red; */
 }
 
 body {
   background-color: rgb(var(--grayscale-01));
-
   #root {
-    width: 100vw;
-    min-height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    max-width: 100vw;
+    height: 100vh;
     max-width: 1440px;
+    min-width: 375px;
     margin: 0 auto;
     box-shadow: 0 0 600px rgb(var(--grayscale-00));
+
+    .root-wrapper  {
+      width: 100%;
+      min-height: 100vh;
+      overflow-y: scroll;
+      
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        gap: 100px;
+      
+      }
+      --width: 6px;
+      &::-webkit-scrollbar {
+        width: var(--width);
+        background-color: transparent;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: rgb(var(--grayscale-02), 0.7);
+        cursor: grab;
+      }
+  
+      &::-moz-scrollbar {
+        width: var(--width);
+      }
+  
+      &::-moz-scrollbar-thumb {
+        background: rgb(var(--grayscale-02), 0.7);
+        cursor: grab;
+      }
+  
+      /* IE и Edge (частично, стилизация ограничена) */
+      &::-ms-scrollbar {
+          width: var(--width);
+      }
+  
+      &::-ms-scrollbar-thumb {
+          background: rgb(var(--grayscale-02), 0.7);
+          cursor: grab;
+      }
+    }
   }
 }
 
-.header__top-bar,.header__top-panel {
-  padding: 0 clamp(1rem, 0.0317rem + 4.1315vw, 3.75rem);
+.header__top-bar, .header__top-panel, .hero, 
+.about__feature, .metrics, .why-budss, 
+.brand__content, .footer, .abs-background , .accept-cookies  {
+  padding-left: var(--offset);
+  padding-right: var(--offset);
 }
+
+.about__title, .about__description , .brand__header {
+  margin-left: var(--offset);
+  margin-right: var(--offset);
+}
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./assets/styles/bundler.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <script src="./js/NativeComponents.js" defer></script>
+</head>
+<body>
+  <div id="root" data-folder="./components" data-modules="[./js/index.js]">
+    <div class="root-wrapper">
+      <embed data-component="Form"/>
+      <embed data-component="Gratitude"/>
+      <embed data-component="AcceptCookies"/>
+      <main>
+        <embed data-component="Header"/>
+        <embed data-component="sections/Hero"/>
+        <embed data-component="sections/AboutBudss"/>
+        <embed data-component="sections/Works"/>
+        <embed data-component="sections/Metrics"/>
+        <embed data-component="sections/WhyBudds"/>
+        <embed data-component="sections/Brand"/>
+      </main>
+      
+      <embed data-component="Footer"/>
+    </div>
+  </div>
+</body>
+</html> 

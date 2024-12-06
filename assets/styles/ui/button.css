@@ -18,6 +18,9 @@ button {
     color: rgb(var(--grayscale-07));
     &:hover {
       background-color: rgb(var(--grayscale-01));
+      &.__primary-dark {
+        outline: 2px solid rgb(var(--primary-01));
+      }
     }
 
     &:focus, &:focus-visible {
@@ -38,7 +41,7 @@ button {
   }
 
   &.__secondary {
-    background-color: rgb(var(--grayscale-01));
+    /* background-color: rgb(var(--grayscale-01)); */
     color: rgb(var(--grayscale-07));
     border: 2px solid rgb(var(--primary-01));
 

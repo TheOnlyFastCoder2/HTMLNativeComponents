@@ -1,0 +1,134 @@
+.why-budss {
+  .why-budss__title {
+    font-size: clamp(40px, 1.9718rem + 2.2535vw, 64px);
+    font-weight: bold;
+    line-height: 106%;
+    color: rgb(var(--grayscale-06));
+    text-align: center;
+  }
+
+  .why-budss__description { 
+    font-weight:600;
+    margin-top: 20px;
+    max-width: 664px;
+    text-align: center;
+    margin: 20px auto 70px;
+    font-size:  clamp(24px, 1.2359rem + 1.1268vw, 36px);
+    color: rgb(var(--grayscale-06));
+
+    span {
+      max-width: 387px;
+    }
+  }
+
+  .why-budss__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 0;
+
+    .why-budss__item {
+
+      border-radius: 30px;
+      background-color: rgb(var(--grayscale-06));
+      color: rgb(var(--grayscale-00));
+      padding: clamp(20px, 0.8099rem + 1.8779vw,40px);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+
+      .why-budss__item-title {
+        font-size: clamp(32px,1.6479rem + 1.5023vw, 48px);
+        font-weight: bold;
+        font-weight: 106%;
+        margin-bottom: 20px;
+      }
+
+      .why-budss__item-description {
+        font-size: clamp(16px, 0.912rem + 0.3756vw, 20px);
+        line-height: 120%;
+        margin-top: 20px;
+        text-wrap: pretty;
+        text-shadow: 2px 2px rgb(var(--grayscale-06)), -2px -2px rgb(var(--grayscale-06));
+      }
+
+      &:nth-child(1) {    
+        width: 111.06%;
+        background-position: left bottom;
+        background-position: -6.09vw  calc(110% + 2vw);
+        background-image: url(../../../imgs/why-budss/1.png);
+        .why-budss__item-wrapper {
+          max-width: 364px;
+          margin-left: auto;
+        }
+      }
+      &:nth-child(2) {
+        width: 82.889%;/*547px;*/
+        min-height: 362px;
+        margin-left: auto;
+        background-image: url(../../../imgs/why-budss/2.png);
+        .why-budss__item-wrapper {
+          max-width: 416px;
+        }
+      }
+      &:nth-child(3) {
+        width: 82.889%;
+        min-height: 362px;
+        margin-right: auto;
+        background-image: url(../../../imgs/why-budss/3.png);
+        .why-budss__item-wrapper {
+          max-width: 416px;
+          .why-budss__item-description {
+            max-width: 308px;
+          }
+        }
+      }
+      &:nth-child(4) {
+        position: relative;
+        width: 111.06%; /*733px;*/
+        background-image: url(../../../imgs/why-budss/4.png);
+        right: 10%;
+        .why-budss__item-wrapper {
+          max-width: 402px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .why-budss__container{
+      display: flex;
+      flex-direction: column;
+      .why-budss__item { 
+        &:nth-child(1),&:nth-child(2),
+        &:nth-child(3),&:nth-child(4) {
+          width: 100%;
+          left:0;
+        }
+
+        &:nth-child(1) {
+          min-height: 362px;
+          background-position: -11vw  calc(110% + 4vw);
+          .why-budss__item-wrapper {
+            margin-left: unset;
+          }
+        }
+        &:nth-child(2) {
+          min-height: 333px;
+        }
+        &:nth-child(3) {
+          min-height: 313px;
+        }
+        &:nth-child(4) {
+          min-height: 395px;
+        }
+      }
+    }
+  } 
+  @media (max-width: 375px) {
+    .why-budss__container .why-budss__item:nth-child(1) {
+      background-position-x: -45px;
+    }
+  }
+
+}

@@ -27,8 +27,9 @@
     height: 71px;
     background-color: rgb(var(--grayscale-01));
 
-    .header__logo   img  {
-      max-width: 156px;
+    .header__logo {
+      width: 156px;
+      height: 51.83px;
     }
 
     .header__nav{
@@ -67,13 +68,18 @@
         .header__nav-burger--close {
           display: block;
           text-align: end;
+          cursor: pointer;
           margin-bottom: 125px;
+          img {
+            width: auto;
+          }
         }
 
         .wrapper {
           position: fixed;
-          width: 100vw;
+          z-index: 99;
           height:100vh;
+          width: calc(100vw - var(--offset)/2);
           top: 0;
           left:0;
           background: rgb(var(--grayscale-01));
@@ -87,10 +93,13 @@
             list-style-type: none;
             gap: 16px;
             margin-top: 177px;
-            li {
+            .header__nav-item a {
               font-size: 20px;
               font-weight:500;
+     
+              cursor: pointer;
               text-transform: capitalize;
+              text-decoration: none;
               color: rgb(var(--grayscale-07))  
             }
           }
@@ -99,6 +108,7 @@
 
       .header__nav-burger {
         display: block;
+        cursor: pointer;
       }
     }
   }
