@@ -148,7 +148,7 @@ button {
     }
 
     &.__loading::before {
-      background-image: url(../../imgs/svg/loadingPrimary.svg);
+      background-image: url(../imgs/svg/loadingPrimary.svg);
     }
     
     &:disabled {
@@ -174,7 +174,7 @@ button {
     }
 
     &.__loading::before {
-      background-image: url(../../imgs/svg/loadingSecondary.svg);
+      background-image: url(../imgs/svg/loadingSecondary.svg);
     }
 
     &:disabled {
