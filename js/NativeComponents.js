@@ -37,11 +37,12 @@ async function getComponent(nameComponent, containerNode) {
     return response.text();
   })
   .then(async (html) => {
-    const nodeHtml = await parseNode(html);
+    let nodeHtml = await parseNode(html);
     const isIntoSlot = nodeHtml.querySelector('slot');
     const isIntoChildren = containerNode.innerHTML.trim().length > 0;
 
     if( isIntoChildren && isIntoSlot ) {
+      
       html = html.replace('<slot/>', containerNode.innerHTML);
     } else if(!isIntoChildren && isIntoSlot) {
       throw new Error("You added <slot/> to the component, but you’re not injected child elements.");
@@ -49,7 +50,7 @@ async function getComponent(nameComponent, containerNode) {
       throw new Error("You injected child elements, but you didn’t add <slot/> to the component.");
     }
  
-
+    nodeHtml = await parseNode(html);
     await loadComponents(nodeHtml);
     return [containerNode, nodeHtml]
   })
