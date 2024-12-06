@@ -1,13 +1,15 @@
 <section class="hero">
-  <div class="hero__content">  <!-- Блок с контентом -->
+
+  <div class="hero__content">
     <h1 class="hero__title">Everyone is an Influencer</h1>
     <p class="hero__description">
       Budss is a payments as a service and WOM engine dedicated to acquisition
       and retention of customers to your business.
     </p>
+    <slot/>
     <button class="hero__button __primary __primary-dark __contacts">Contact sales</button>
   </div>
-  <div class="hero__image">  <!-- Блок с изображением -->
+  <div class="hero__image">
     <picture>
       <source srcset="./assets/imgs/Hero.png" type="image/png">
       <img src="./assets/imgs/Hero.png" alt="Budss Logo" class="hero__image-logo">

@@ -11,7 +11,6 @@ async function loadComponents(node) {
   }
 }
 
-
 function* iterateDOMTree(node) {
   const stack = [node];
   while (stack.length > 0) {
@@ -38,10 +37,10 @@ async function getComponent(nameComponent, containerNode) {
     return response.text();
   })
   .then(async (html) => {
+    console.log(containerNode)
+    html = html.replace('<slot/>', containerNode.innerHTML);
     const nodeHtml = await parseNode(html);
-    
     await loadComponents(nodeHtml);
-   
     return [containerNode, nodeHtml]
   })
   .catch(error => {
