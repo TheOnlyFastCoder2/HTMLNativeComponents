@@ -28,7 +28,6 @@
     gap: 20px 0;
 
     .why-budss__item {
-
       border-radius: 30px;
       background-color: rgb(var(--grayscale-06));
       color: rgb(var(--grayscale-00));
@@ -53,7 +52,7 @@
       }
 
       &:nth-child(1) {    
-        width: 111.06%;
+        width: 111.6%;
         background-position: left bottom;
         background-position: -6.09vw  calc(110% + 2vw);
         background-image: url(../../../imgs/why-budss/1.png);
@@ -63,7 +62,7 @@
         }
       }
       &:nth-child(2) {
-        width: 82.889%;/*547px;*/
+        width: 83.26%;/*547px;*/
         min-height: 362px;
         margin-left: auto;
         background-image: url(../../../imgs/why-budss/2.png);
@@ -72,7 +71,7 @@
         }
       }
       &:nth-child(3) {
-        width: 82.889%;
+        width: 83.26%;
         min-height: 362px;
         margin-right: auto;
         background-image: url(../../../imgs/why-budss/3.png);
@@ -85,7 +84,7 @@
       }
       &:nth-child(4) {
         position: relative;
-        width: 111.06%; /*733px;*/
+        width: 111.6%; /*733px;*/
         background-image: url(../../../imgs/why-budss/4.png);
         right: 10%;
         .why-budss__item-wrapper {
