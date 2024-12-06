@@ -42,7 +42,6 @@ async function getComponent(nameComponent, containerNode) {
     const isIntoChildren = containerNode.innerHTML.trim().length > 0;
 
     if( isIntoChildren && isIntoSlot ) {
-      
       html = html.replace('<slot/>', containerNode.innerHTML);
     } else if(!isIntoChildren && isIntoSlot) {
       throw new Error("You added <slot/> to the component, but you’re not injected child elements.");
