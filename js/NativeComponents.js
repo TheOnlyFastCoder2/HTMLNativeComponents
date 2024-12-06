@@ -53,13 +53,13 @@ async function getComponent(nameComponent, containerNode) {
 window.addEventListener('load', async () => {
   const rootOrigin = document.getElementById('root');
   const rootCopy = root.cloneNode(true);
-  rootOrigin.innerHTML = '';
   const paths = root.dataset.modules||JSModules;
   rootFolder = root.dataset.folder||rootFolder;
   rootFolder = rootFolder.substring(2,rootFolder.length);
   JSModules = paths.substring(1, paths.length - 1).split(',');
-
+  
   if(root) {
+    rootOrigin.innerHTML = '';
     await loadComponents(rootCopy);
     for(const [containerNode, nodeHtml] of componentPromises) {
         await containerNode.parentElement.appendChild(nodeHtml);
