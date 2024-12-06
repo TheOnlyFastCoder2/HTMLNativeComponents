@@ -20,10 +20,12 @@
 **1.  `./index.html`**
 
 ```html
-// указываем путь к файлу: `data-component=""
-// интерпретация: ./components/sections/Hero.html
-<div data-component="sections/Hero">
-  <button style="color: red;">😉</button>
+<div id="root" data-folder="./components" data-modules="[./js/index.js]">
+  // указываем путь к файлу: `data-component=""
+  // интерпретация: ./components/sections/Hero.html
+  <div data-component="sections/Hero">
+    <button style="color: red;">😉</button>
+  </div>
 </div>
 ```
 
