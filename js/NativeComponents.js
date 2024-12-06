@@ -51,18 +51,22 @@ async function getComponent(nameComponent, containerNode) {
 
 
 window.addEventListener('load', async () => {
-  const root = document.getElementById('root');
+  const rootOrigin = document.getElementById('root');
+  const rootCopy = root.cloneNode(true);
+  rootOrigin.innerHTML = '';
   const paths = root.dataset.modules||JSModules;
   rootFolder = root.dataset.folder||rootFolder;
   rootFolder = rootFolder.substring(2,rootFolder.length);
   JSModules = paths.substring(1, paths.length - 1).split(',');
 
   if(root) {
-    await loadComponents(root);
+    await loadComponents(rootCopy);
     for(const [containerNode, nodeHtml] of componentPromises) {
         await containerNode.parentElement.appendChild(nodeHtml);
         await containerNode.remove();
     }
+
+    rootOrigin.innerHTML = rootCopy.innerHTML;
     for(const JSModule of JSModules) {
       const script = document.createElement('script');
       script.src = JSModule.trim();
