@@ -79,7 +79,7 @@
           position: fixed;
           z-index: 99;
           height:100vh;
-          width: calc(100vw - var(--offset)/2);
+          width: 100vw;
           top: 0;
           left:0;
           background: rgb(var(--grayscale-01));

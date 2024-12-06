@@ -47,11 +47,14 @@
   .brand__marquee {
     overflow: hidden;
     .brand__marquee-wrapper {
+      min-width: 100%;
       display: flex;
       gap: clamp(40px, 1.3996rem + 4.6948vw, 90px);
       white-space: nowrap;
       animation: marquee-right 15s linear infinite;
-      animation-fill-mode: forwards;
+      @media (max-width: 1440px) {
+        min-width: 200%;
+      }
     }
 
     .brand__maruee-item {
@@ -69,5 +72,5 @@
 
 @keyframes marquee-right {
   from { transform: translateX(100%);}
-  to { transform: translateX(-100%);}
+  to { transform: translateX(-120%);}
 }
