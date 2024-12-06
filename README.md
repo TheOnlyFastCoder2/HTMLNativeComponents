@@ -36,3 +36,5 @@
  <div> <slot/> </div>
 </section>
 ```
+
+<img src="https://github.com/user-attachments/assets/0ecff731-2ad8-4460-9a5b-54693451e1d8" width="1200"/>
