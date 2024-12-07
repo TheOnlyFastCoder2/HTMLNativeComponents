@@ -34,7 +34,7 @@
   <button data-component="Button">😉<button/>
 </section>
 ```
-**3.  `./components/sections/Button.html`**
+**3.  `./components/Button.html`**
 ```html
 <button style="color: red;">
   <slot/>
