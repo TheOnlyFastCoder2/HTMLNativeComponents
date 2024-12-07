@@ -70,6 +70,9 @@ window.addEventListener('load', async () => {
   
   if(root) {
     rootOrigin.innerHTML = '';
+    rootOrigin.removeAttribute('data-modules');
+    rootOrigin.removeAttribute('data-folder');
+    
     await loadComponents(rootCopy);
     for(const [containerNode, nodeHtml] of componentPromises) {
         await containerNode.parentElement.appendChild(nodeHtml);
