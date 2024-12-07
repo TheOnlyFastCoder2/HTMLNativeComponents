@@ -26,7 +26,7 @@
 <div id="root" data-folder="./components" data-modules="[./js/index.js]">
   // указываем путь к файлу: `data-component=""
   // интерпретация: ./components/sections/Hero.html
-  <embed data-component="sections/Hero"/> // можно казать любой тег
+  <embed data-component="sections/Hero"/> // можно указать любой тег
 </div>
 ```
 
