@@ -24,17 +24,21 @@
 <div id="root" data-folder="./components" data-modules="[./js/index.js]">
   // указываем путь к файлу: `data-component=""
   // интерпретация: ./components/sections/Hero.html
-  <div data-component="sections/Hero">
-    <button style="color: red;">😉</button>
-  </div>
+  <embed data-component="sections/Hero"/> // можно казать любой тег
 </div>
 ```
 
 **2.  `./components/sections/Hero.html`**
 ```html
 <section>
- <div> <slot/> </div>
+  <button data-component="Button">😉<button/>
 </section>
+```
+**3.  `./components/sections/Button.html`**
+```html
+<button style="color: red;">
+  <slot/>
+</button>
 ```
 
 <img src="https://github.com/user-attachments/assets/0ecff731-2ad8-4460-9a5b-54693451e1d8" width="1200"/>
