@@ -30,8 +30,12 @@
 
 **2.  `./components/sections/Hero.html`**
 ```html
-<section>
-  <button data-component="Button">😉<button/>
+<section class="hero">
+  <div class="hero__content">
+     <button data-component="Button">
+      😉 привет как дела ? 
+    </button>
+  </div>
 </section>
 ```
 **3.  `./components/Button.html`**
@@ -41,4 +45,5 @@
 </button>
 ```
 
-<img src="https://github.com/user-attachments/assets/0ecff731-2ad8-4460-9a5b-54693451e1d8" width="1200"/>
+<img src="https://github.com/user-attachments/assets/fd4b5594-b181-4bf6-896d-99d81545f557" width="1200"/>
+
